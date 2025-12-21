@@ -4,12 +4,13 @@
 ![Bash](https://img.shields.io/badge/Language-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 This is a personal project that allows you to loop videos and images on a Raspberry Pi connected to a display. It runs as a background service, meaning it starts automatically on boot—no desktop environment or mouse required.
-I use this to display videos on a small 5 inch portable crt tv from the 1980's using a Pi
+I use this to display videos on a small CRT display.
 ---
 ## Important Note
 This project assumes your username is pi. If you are using a different username, you must update the paths in:
 ```
 webui.service (The ExecStart and User lines)
+webui.py (config)
 media_looper.service (The ExecStart and User lines)
 run_playlist.sh (The MEDIA_DIR variable)
 switch_playlist.sh (The SERVICE path)
@@ -74,6 +75,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now webui.service
 ```
 Access at http://your-pi-ip:8080
+
 
 
 
